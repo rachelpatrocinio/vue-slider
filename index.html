@@ -18,7 +18,7 @@
             <div class="slider-wrapper" tabindex="0">
 
                 <!-- SE L'INDICE è === A 0 ALLORA METTIAMO LA CLASSE active -->
-                <div class="item" :class="i === currentSlideIndex ? 'active' : '' " v-for="(singleSlide, i) in slides">
+                <div class="item" :class="i === currentSlideIndex ? 'active' : '' " v-for="(singleSlide, i) in slides" @mouseover="stop" @mouseleave="play">
                     <img :src="singleSlide.image" alt="Spiderman" /> 
                     <div class="text">
                         <h3>{{ singleSlide.title }}</h3>
