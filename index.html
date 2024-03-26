@@ -10,10 +10,24 @@
 </head>
 
 <body>
+    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
 
     <div id="app">
 
         <div class="container">
+            <div class="slider-wrapper" tabindex="0">
+
+                <div class="item" v-for="singleSlide in slides">
+                    <img :src="singleSlide.image" alt="Spiderman" />
+                    <div class="text">
+                        <h3>{{ singleSlide.title }}</h3>
+                        <p>{{ singleSlide.text }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="container">
             <div class="slider-wrapper" tabindex="0">
 
                 <div class="item">
@@ -50,11 +64,10 @@
                 </div>
 
             </div>
-        </div>
+        </div> -->
 
     </div>
 
-    <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>
 </body>
 
