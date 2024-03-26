@@ -27,8 +27,8 @@
                 </div>
 
                 <div class="thumbs">
-                    <div class="prev" @click="currentSlideIndex--"></div>
-                    <div class="next" @click="currentSlideIndex++"></div>
+                    <div class="prev" @click="prev"></div>
+                    <div class="next" @click="next"></div>
                     <div class="thumb" :class="i === currentSlideIndex ? 'active' : '' " v-for="(singleSlide,i) in slides">
                         <img :src="singleSlide.image" alt="Svezia" />
                     </div>

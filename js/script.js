@@ -60,5 +60,18 @@ createApp({
         }
     },
     methods: {
+        prev(){
+            this.currentSlideIndex--;
+            if(this.currentSlideIndex < 0){
+                this.currentSlideIndex = 4
+            }
+            
+        },
+        next(){
+            this.currentSlideIndex++;
+            if(this.currentSlideIndex === this.slides.length){
+                this.currentSlideIndex = 0
+            }
+        }
     }
 }).mount('#app');
