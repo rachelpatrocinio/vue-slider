@@ -25,6 +25,14 @@
                         <p>{{ singleSlide.text }}</p>
                     </div>
                 </div>
+
+                <div class="thumbs">
+                    <div class="prev"></div>
+                    <div class="next"></div>
+                    <div class="thumb" :class="i === currentSlideIndex ? 'active' : '' " v-for="(singleSlide,i) in slides">
+                        <img :src="singleSlide.image" alt="Svezia" />
+                    </div>
+                </div>
             </div>
         </div>
 
