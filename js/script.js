@@ -58,5 +58,7 @@ createApp({
             ],
             currentSlideIndex: 0
         }
+    },
+    methods: {
     }
 }).mount('#app');
