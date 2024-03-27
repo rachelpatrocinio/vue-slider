@@ -62,6 +62,7 @@ createApp({
     },
     methods: {
         prev(){
+            this.stop;
             this.currentSlideIndex--;
             if(this.currentSlideIndex < 0){
                 this.currentSlideIndex = 4
@@ -69,6 +70,7 @@ createApp({
             
         },
         next(){
+            this.stop;
             this.currentSlideIndex++;
             if(this.currentSlideIndex === this.slides.length){
                 this.currentSlideIndex = 0
