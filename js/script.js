@@ -67,7 +67,6 @@ createApp({
             if(this.currentSlideIndex < 0){
                 this.currentSlideIndex = 4
             }
-            
         },
         next(){
             this.stop;
@@ -78,12 +77,13 @@ createApp({
         },
         stop(){
             clearInterval(this.interval);
+            this.interval = ''
         },
         play(){
-            setInterval(this.next, 3000)
+            this.interval = setInterval(this.next, 3000)
         }
     },
     mounted(){
-        this.interval = setInterval(this.next, 3000);
+        this.play()
     }
 }).mount('#app');
